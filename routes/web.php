@@ -15,8 +15,17 @@ Route::get('/about', function () {
 });
 
 // Admin routes with auth middleware
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+//Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('packages', \App\Http\Controllers\Admin\PackageController::class);
+//});
+
+
+
+// After Login - Redirect to Dashboard
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('admin.admin');  // Render your dashboard view
+    });
 });
 
 // Add this line to include the auth routes

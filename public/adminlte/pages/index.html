@@ -3,18 +3,18 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Shepherd | Dashboard</title>
+    <title>AdminLTE v4 | Dashboard</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Shepherd v4 | Dashboard" />
+    <meta name="title" content="AdminLTE v4 | Dashboard" />
     <meta name="author" content="ColorlibHQ" />
     <meta
       name="description"
-      content="As the name suggests, Shepherd Adventure Trekking is dedicated to taking good care of its individual clients in the same way a good shepherd looks after his flock. Customer's safety and satisfaction are always at the top of our priorities."
+      content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS."
     />
     <meta
       name="keywords"
-      content="As the name suggests, Shepherd Adventure Trekking is dedicated to taking good care of its individual clients in the same way a good shepherd looks after his flock. Customer's safety and satisfaction are always at the top of our priorities. admin dashboard"
+      content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard"
     />
     <!--end::Primary Meta Tags-->
     <!--begin::Fonts-->
@@ -42,7 +42,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.css') }}" />
+    <link rel="stylesheet" href="../../dist/css/adminlte.css" />
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -100,7 +100,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="{{asset('assets/img/user1-128x128.jpg')}}"
+                        src="../../dist/assets/img/user1-128x128.jpg"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -126,7 +126,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="{{asset('assets/img/user8-128x128.jpg')}}"
+                        src="../../dist/assets/img/user8-128x128.jpg"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -152,7 +152,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="{{asset('assets/img/user3-128x128.jpg')}}"
+                        src="../../dist/assets/img/user3-128x128.jpg"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -217,7 +217,7 @@
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src="{{asset('assets/img/user2-160x160.jpg')}}"
+                  src="../../dist/assets/img/user2-160x160.jpg"
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
@@ -227,7 +227,7 @@
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <img
-                    src="{{asset('dist/assets/img/user2-160x160.jpg')}}"
+                    src="../../dist/assets/img/user2-160x160.jpg"
                     class="rounded-circle shadow"
                     alt="User Image"
                   />
@@ -264,7 +264,453 @@
       </nav>
       <!--end::Header-->
       <!--begin::Sidebar-->
-
+      <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+        <!--begin::Sidebar Brand-->
+        <div class="sidebar-brand">
+          <!--begin::Brand Link-->
+          <a href="./index.html" class="brand-link">
+            <!--begin::Brand Image-->
+            <img
+              src="../../dist/assets/img/AdminLTELogo.png"
+              alt="AdminLTE Logo"
+              class="brand-image opacity-75 shadow"
+            />
+            <!--end::Brand Image-->
+            <!--begin::Brand Text-->
+            <span class="brand-text fw-light">AdminLTE 4</span>
+            <!--end::Brand Text-->
+          </a>
+          <!--end::Brand Link-->
+        </div>
+        <!--end::Sidebar Brand-->
+        <!--begin::Sidebar Wrapper-->
+        <div class="sidebar-wrapper">
+          <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul
+              class="nav sidebar-menu flex-column"
+              data-lte-toggle="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Dashboard
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.html" class="nav-link active">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Dashboard v1</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index2.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Dashboard v2</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index3.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Dashboard v3</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="./generate/theme.html" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Theme Generate</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-box-seam-fill"></i>
+                  <p>
+                    Widgets
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./widgets/small-box.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Small Box</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./widgets/info-box.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>info Box</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./widgets/cards.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Cards</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-clipboard-fill"></i>
+                  <p>
+                    Layout Options
+                    <span class="nav-badge badge text-bg-secondary me-3">6</span>
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./layout/unfixed-sidebar.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Default Sidebar</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./layout/fixed-sidebar.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Fixed Sidebar</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./layout/layout-custom-area.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Layout <small>+ Custom Area </small></p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./layout/sidebar-mini.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Sidebar Mini</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./layout/collapsed-sidebar.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Sidebar Mini <small>+ Collapsed</small></p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./layout/logo-switch.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Sidebar Mini <small>+ Logo Switch</small></p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./layout/layout-rtl.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Layout RTL</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-tree-fill"></i>
+                  <p>
+                    UI Elements
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./UI/general.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>General</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./UI/icons.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Icons</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./UI/timeline.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Timeline</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-pencil-square"></i>
+                  <p>
+                    Forms
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./forms/general.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>General Elements</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-table"></i>
+                  <p>
+                    Tables
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./tables/simple.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Simple Tables</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-header">EXAMPLES</li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                  <p>
+                    Auth
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                      <p>
+                        Version 1
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="./examples/login.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Login</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./examples/register.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Register</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                      <p>
+                        Version 2
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="./examples/login-v2.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Login</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./examples/register-v2.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Register</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./examples/lockscreen.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Lockscreen</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-header">DOCUMENTATIONS</li>
+              <li class="nav-item">
+                <a href="./docs/introduction.html" class="nav-link">
+                  <i class="nav-icon bi bi-download"></i>
+                  <p>Installation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./docs/layout.html" class="nav-link">
+                  <i class="nav-icon bi bi-grip-horizontal"></i>
+                  <p>Layout</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./docs/color-mode.html" class="nav-link">
+                  <i class="nav-icon bi bi-star-half"></i>
+                  <p>Color Mode</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-ui-checks-grid"></i>
+                  <p>
+                    Components
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./docs/components/main-header.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Main Header</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./docs/components/main-sidebar.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Main Sidebar</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-filetype-js"></i>
+                  <p>
+                    Javascript
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./docs/javascript/treeview.html" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Treeview</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="./docs/browser-support.html" class="nav-link">
+                  <i class="nav-icon bi bi-browser-edge"></i>
+                  <p>Browser Support</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./docs/how-to-contribute.html" class="nav-link">
+                  <i class="nav-icon bi bi-hand-thumbs-up-fill"></i>
+                  <p>How To Contribute</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./docs/faq.html" class="nav-link">
+                  <i class="nav-icon bi bi-question-circle-fill"></i>
+                  <p>FAQ</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./docs/license.html" class="nav-link">
+                  <i class="nav-icon bi bi-patch-check-fill"></i>
+                  <p>License</p>
+                </a>
+              </li>
+              <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Level 1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>
+                    Level 1
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Level 2</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>
+                        Level 2
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon bi bi-record-circle-fill"></i>
+                          <p>Level 3</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon bi bi-record-circle-fill"></i>
+                          <p>Level 3</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="nav-icon bi bi-record-circle-fill"></i>
+                          <p>Level 3</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Level 2</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Level 1</p>
+                </a>
+              </li>
+              <li class="nav-header">LABELS</li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle text-danger"></i>
+                  <p class="text">Important</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle text-warning"></i>
+                  <p>Warning</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-circle text-info"></i>
+                  <p>Informational</p>
+                </a>
+              </li>
+            </ul>
+            <!--end::Sidebar Menu-->
+          </nav>
+        </div>
+        <!--end::Sidebar Wrapper-->
+      </aside>
       <!--end::Sidebar-->
       <!--begin::App Main-->
       <main class="app-main">
@@ -293,7 +739,90 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-             
+              <!--begin::Col-->
+              <div class="col-lg-3 col-6">
+                <!--begin::Small Box Widget 1-->
+                <div class="small-box text-bg-primary">
+                  <div class="inner">
+                    <h3>150</h3>
+                    <p>New Orders</p>
+                  </div>
+                  <svg
+                    class="small-box-icon"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#"
+                    class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
+                  >
+                    More info <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+                <!--end::Small Box Widget 1-->
+              </div>
+              <!--end::Col-->
+              <div class="col-lg-3 col-6">
+                <!--begin::Small Box Widget 2-->
+                <div class="small-box text-bg-success">
+                  <div class="inner">
+                    <h3>53<sup class="fs-5">%</sup></h3>
+                    <p>Bounce Rate</p>
+                  </div>
+                  <svg
+                    class="small-box-icon"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#"
+                    class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
+                  >
+                    More info <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+                <!--end::Small Box Widget 2-->
+              </div>
+              <!--end::Col-->
+              <div class="col-lg-3 col-6">
+                <!--begin::Small Box Widget 3-->
+                <div class="small-box text-bg-warning">
+                  <div class="inner">
+                    <h3>44</h3>
+                    <p>User Registrations</p>
+                  </div>
+                  <svg
+                    class="small-box-icon"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z"
+                    ></path>
+                  </svg>
+                  <a
+                    href="#"
+                    class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover"
+                  >
+                    More info <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+                <!--end::Small Box Widget 3-->
+              </div>
               <!--end::Col-->
               <div class="col-lg-3 col-6">
                 <!--begin::Small Box Widget 4-->
@@ -371,14 +900,13 @@
                       <!-- Message. Default to the start -->
                       <div class="direct-chat-msg">
                         <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-start"> Suresh Tharu </span>
+                          <span class="direct-chat-name float-start"> Alexander Pierce </span>
                           <span class="direct-chat-timestamp float-end"> 23 Jan 2:00 pm </span>
                         </div>
-                        
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="{{asset('assets/img/user1-128x128.jpg')}}"
+                          src="../../dist/assets/img/user1-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -397,7 +925,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="{{asset('assets/img/user3-128x128.jpg')}}"
+                          src="../../dist/assets/img/user3-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -414,7 +942,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="{{asset('assets/img/user1-128x128.jpg')}}"
+                          src="../../dist/assets/img/user1-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -433,7 +961,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="{{asset('assets/img/user3-128x128.jpg')}}"
+                          src="../../dist/assets/img/user3-128x128.jpg"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -450,7 +978,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="{{asset('assets/img/user1-128x128.jpg')}}"
+                              src="../../dist/assets/img/user1-128x128.jpg"
                               alt="User Avatar"
                             />
                             <div class="contacts-list-info">
@@ -468,7 +996,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="{{asset('assets/img/user7-128x128.jpg')}}"
+                              src="../../dist/assets/img/user7-128x128.jpg"
                               alt="User Avatar"
                             />
                             <div class="contacts-list-info">
@@ -486,7 +1014,7 @@
                           <a href="#">
                             <img
                               class="contacts-list-img"
-                              src="{{asset('assets/img/user3-128x128.jpg')}}"
+                              src="../../dist/assets/img/user3-128x128.jpg"
                               alt="User Avatar"
                             />
                             <div class="contacts-list-info">
@@ -500,7 +1028,59 @@
                           </a>
                         </li>
                         <!-- End Contact Item -->
-                        
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="../../dist/assets/img/user5-128x128.jpg"
+                              alt="User Avatar"
+                            />
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                Nora S. Vans
+                                <small class="contacts-list-date float-end"> 2/10/2023 </small>
+                              </span>
+                              <span class="contacts-list-msg"> Where is your new... </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="../../dist/assets/img/user6-128x128.jpg"
+                              alt="User Avatar"
+                            />
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                John K.
+                                <small class="contacts-list-date float-end"> 1/27/2023 </small>
+                              </span>
+                              <span class="contacts-list-msg"> Can I take a look at... </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
+                        <!-- End Contact Item -->
+                        <li>
+                          <a href="#">
+                            <img
+                              class="contacts-list-img"
+                              src="../../dist/assets/img/user8-128x128.jpg"
+                              alt="User Avatar"
+                            />
+                            <div class="contacts-list-info">
+                              <span class="contacts-list-name">
+                                Kenneth M.
+                                <small class="contacts-list-date float-end"> 1/4/2023 </small>
+                              </span>
+                              <span class="contacts-list-msg"> Never mind I found... </span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                          </a>
+                        </li>
                         <!-- End Contact Item -->
                       </ul>
                       <!-- /.contacts-list -->
@@ -610,7 +1190,7 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="{{asset('adminlte/js/adminlte.js')}}"></script>
+    <script src="../../dist/js/adminlte.js"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
