@@ -22,7 +22,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                     <li class="user-footer">
-                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    <a href="{{ route('admin.profile') }}" class="btn btn-default btn-flat">Profile</a>
                         <form method="POST" action="{{ route('logout') }}" style="display: inline;">
                             @csrf
                             <button type="submit" class="btn btn-link text-danger">Sign Out</button>
