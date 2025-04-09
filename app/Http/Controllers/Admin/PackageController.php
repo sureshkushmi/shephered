@@ -31,14 +31,29 @@ class PackageController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $request->validate([
-	'title'=>'required',
-	'description'=>'required'
-	]);
-	Package::create($request->all());
-	return redirect()->route('admin.packages.index')->with('success', 'Packages Created');
-    }
+{
+    // Validate the image
+    $validated = $request->validate([
+        'title' => 'required|string|max:255',
+        'price' => 'required|numeric',
+        'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
+        'description' => 'nullable|string',
+    ]);
+
+    // Store the image in the 'packages' folder within 'storage/app/public'
+    $imagePath = $request->file('image')->store('packages', 'public');
+
+    // Create the Package and save it
+    Package::create([
+        'title' => $request->title,
+        'price' => $request->price,
+        'image' => $imagePath,
+        'description' => $request->description,
+    ]);
+
+    return redirect()->route('admin.packages.index')->with('success', 'Package added successfully!');
+}
+
 
     /**
      * Display the specified resource.
