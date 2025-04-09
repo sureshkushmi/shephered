@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>@yield('title','Shepherd | Dashboard')</title>
+    <title>Shepherd | Dashboard</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Shepherd v4 | Dashboard" />
@@ -54,7 +54,57 @@
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
       <!--begin::Header-->
-      @include('admin.includes.navigation')
+      <nav class="app-header navbar navbar-expand bg-body">
+        <!--begin::Container-->
+        <div class="container-fluid">
+          <!--begin::Start Navbar Links-->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+                <i class="bi bi-list"></i>
+              </a>
+            </li>
+            <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+          <!--end::Start Navbar Links-->
+          <!--begin::End Navbar Links-->
+          <ul class="navbar-nav ms-auto">
+
+            <!--end::Navbar Search-->
+
+            <!--end::Fullscreen Toggle-->
+            <!--begin::User Menu Dropdown-->
+            <li class="nav-item dropdown user-menu">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <span class="d-none d-md-inline">Suresh Tharu</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                <!--end::User Image-->
+                <!--begin::Menu Body-->
+             
+                <!--end::Menu Body-->
+                <!--begin::Menu Footer-->
+                <li class="user-footer">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+
+                    <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+                        @csrf
+                        <button type="submit" class="btn btn-default btn-flat float-end" style="background: none; border: none; padding: 0; cursor: pointer;">
+                            Sign out
+                        </button>
+                    </form>
+                </li>
+
+                <!--end::Menu Footer-->
+              </ul>
+            </li>
+            <!--end::User Menu Dropdown-->
+          </ul>
+          <!--end::End Navbar Links-->
+        </div>
+        <!--end::Container-->
+      </nav>
       <!--end::Header-->
       <!--begin::Sidebar-->
 
@@ -62,7 +112,23 @@
       <!--begin::App Main-->
       <main class="app-main">
         <!--begin::App Content Header-->
-        @include('admin.includes.breadcrumb')
+        <div class="app-content-header">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <!--begin::Row-->
+            <div class="row">
+              <div class="col-sm-6"><h3 class="mb-0">Dashboard</h3></div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-end">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                </ol>
+              </div>
+            </div>
+            <!--end::Row-->
+          </div>
+          <!--end::Container-->
+        </div>
         <!--end::App Content Header-->
         <!--begin::App Content-->
         <div class="app-content">
@@ -70,10 +136,17 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-             @yield('content')
+             
 
             </div>
             <!--end::Row-->
+            <!--begin::Row-->
+            <div class="row">
+              <!-- Start col -->
+  
+              <!-- /.Start col -->
+            </div>
+            <!-- /.row (main row) -->
           </div>
           <!--end::Container-->
         </div>
@@ -83,11 +156,11 @@
       <!--begin::Footer-->
       <footer class="app-footer">
         <!--begin::To the end-->
-        <div class="float-end d-none d-sm-inline">Shepherd</div>
+        <div class="float-end d-none d-sm-inline">Anything you want</div>
         <!--end::To the end-->
         <!--begin::Copyright-->
         <strong>
-          Copyright &copy; 2025&nbsp;
+          Copyright &copy; 2014-2024&nbsp;
           <a href="https://ypnepal.com.np" class="text-decoration-none">Globalbiz</a>.
         </strong>
         All rights reserved.
@@ -142,5 +215,4 @@
            <!--end::Script-->
   </body>
   <!--end::Body-->
->>>>>>> b9d2d40c769388714ca65999a4f2cc835037f882
 </html>

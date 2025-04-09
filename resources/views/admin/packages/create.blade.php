@@ -1,68 +1,38 @@
-@include('includes.header')
-    <!-- Topbar Start -->
-    @include('includes.topbar')
-    <!-- Topbar End -->
+@extends('admin.admin')
 
+@section('content')
+<div class="container">
+    <h2>Add New Package</h2>
 
-    <!-- Navbar Start -->
-    @include('includes.navbar')
-    <!-- Navbar End -->
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul>
+        </div>
+    @endif
 
+    <form method="POST" action="{{ route('admin.packages.store') }}" enctype="multipart/form-data">
+        @csrf
+        <div class="mb-3">
+            <label>Name:</label>
+            <input type="text" name="title" class="form-control" required>
+        </div>
 
-    <!-- Carousel Start -->
-    @include('includes.carousel')
-    <!-- Carousel End -->
+        <div class="mb-3">
+            <label>Price:</label>
+            <input type="number" name="price" step="0.01" class="form-control" required>
+        </div>
 
+        <div class="mb-3">
+            <label>Image:</label>
+            <input type="file" name="image" step="0.01" class="form-control" required>
+        </div>
 
-    <!-- Booking Start -->
-    @include('includes.booking');
-    <!-- Booking End -->
+        <div class="mb-3">
+            <label>Description:</label>
+            <textarea name="description" class="form-control"></textarea>
+        </div>
 
-
-    <!-- About Start -->
-    @include('includes.about')
-    <!-- About End -->
-
-
-    <!-- Feature Start -->
-    @include('includes.feature')
-        <!-- Feature End -->
-
-
-    <!-- Destination Start -->
-    @include('includes.destination')
-    <!-- Destination Start -->
-
-
-    <!-- Service Start -->
-    @include('includes.service')
-    <!-- Service End -->
-
-
-    <!-- Packages Start -->
-    @include('includes.packages')
-    <!-- Packages End -->
-
-
-    <!-- Registration Start -->
-    @include('includes.registration')
-    <!-- Registration End -->
-
-
-    <!-- Team Start -->
-    @include('includes.team')
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-   @include('includes.testimonial')
-    <!-- Testimonial End -->
-
-
-    <!-- Blog Start -->
-   @include('includes.blog');
-    <!-- Blog End -->
-
-
-    <!-- Footer Start -->
-    @include('includes.footer')
+        <button type="submit" class="btn btn-primary">Save Package</button>
+    </form>
+</div>
+@endsection

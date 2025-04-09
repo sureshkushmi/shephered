@@ -1,68 +1,38 @@
-@include('includes.header')
-    <!-- Topbar Start -->
-    @include('includes.topbar')
-    <!-- Topbar End -->
+@extends('admin.admin')
+@section('Title','Manage Packages')
+@section('content')
+<div class="col-12">
+    <h1>Package List</h1>
+    <a href="{{ route('admin.packages.create') }}" class="btn btn-primary mb-3">Add New Package</a>
 
-
-    <!-- Navbar Start -->
-    @include('includes.navbar')
-    <!-- Navbar End -->
-
-
-    <!-- Carousel Start -->
-    @include('includes.carousel')
-    <!-- Carousel End -->
-
-
-    <!-- Booking Start -->
-    @include('includes.booking');
-    <!-- Booking End -->
-
-
-    <!-- About Start -->
-    @include('includes.about')
-    <!-- About End -->
-
-
-    <!-- Feature Start -->
-    @include('includes.feature')
-        <!-- Feature End -->
-
-
-    <!-- Destination Start -->
-    @include('includes.destination')
-    <!-- Destination Start -->
-
-
-    <!-- Service Start -->
-    @include('includes.service')
-    <!-- Service End -->
-
-
-    <!-- Packages Start -->
-    @include('includes.packages')
-    <!-- Packages End -->
-
-
-    <!-- Registration Start -->
-    @include('includes.registration')
-    <!-- Registration End -->
-
-
-    <!-- Team Start -->
-    @include('includes.team')
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-   @include('includes.testimonial')
-    <!-- Testimonial End -->
-
-
-    <!-- Blog Start -->
-   @include('includes.blog');
-    <!-- Blog End -->
-
-
-    <!-- Footer Start -->
-    @include('includes.footer')
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($packages as $package)
+            <tr>
+                <td>{{ $package->title }}</td>
+                <td>{{ $package->description }}</td>
+                <td>{{ $package->price }}</td>
+                <td>{{ $package->image }}</td>
+                <td>
+                    <a href="{{ route('admin.packages.edit', $package->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <form action="{{ route('admin.packages.destroy', $package->id) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+@endsection

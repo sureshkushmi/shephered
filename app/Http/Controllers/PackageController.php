@@ -28,7 +28,29 @@ class PackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title'=>'required|string|max:255',
+            'price'=>'required|numeric|min:0',
+            'image' => 'required|image|mimes:jpg,jpeg,png,gif',
+            'description'=>'required|nullable|string',
+
+        ]);
+        if($request->hasFile('image'))
+        {
+            $image      =   $request->file('image');
+            //generate a unique name for image
+            $imageName   =   time().'-'.$image->getClientOriginalName();
+            // Store the image in the public directory (or a specific directory)
+            $imagePath = $image->storeAs('images/packages', $imageName, 'public');
+            $package    =   new Package();
+            $package->title = $validatedData['title'];
+            $package->price = $validatedData['price'];
+            $package->image = $imagePath;
+            $package->description = $validatedData['description'];
+            $package->save();
+            return redirect()->route('admin.packages.index')->with('success','Packages insert Successfullu');
+
+        }
     }
 
     /**
