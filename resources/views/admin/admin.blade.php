@@ -62,7 +62,7 @@
       <!--begin::App Main-->
       <main class="app-main">
         <!--begin::App Content Header-->
-        @include('admin.includes.breadcrumb')
+        @include('admin.includes.breadcrumbAdmin')
         <!--end::App Content Header-->
         <!--begin::App Content-->
         <div class="app-content">

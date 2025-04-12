@@ -21,10 +21,10 @@
                 <td>{{ $package->title }}</td>
                 <td>{{ $package->description }}</td>
                 <td>{{ $package->price }}</td>
-                <td>{{ $package->image }}</td>
+                <td><img src="{{ asset('storage/' . $package->image) }}" alt="Current Image" style="width: 100px;"></td>
                 <td>
                     <a href="{{ route('admin.packages.edit', $package->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                    <form action="{{ route('admin.packages.destroy', $package->id) }}" method="POST" style="display:inline;">
+                    <form action="{{ route('admin.packages.destroy', $package->id) }}" method="POST" style="display:inline;" onsubmit="return confirmDelete()">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
@@ -36,3 +36,8 @@
     </table>
 </div>
 @endsection
+<script>
+    function confirmDelete() {
+        return confirm('Are you sure you want to delete this package?');
+    }
+</script>
