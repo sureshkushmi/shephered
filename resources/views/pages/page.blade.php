@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About Us | Shepherd Adventure Trekking')
+@section('title', $page->title)
 
 @section('content')
     <div class="container py-5">

@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('image')->nullable()->detault('default.jpg')->after('email');
+        Schema::create('bookings', function (Blueprint $table) {
+            $table->id();
+	    $table->string('destination');
+	    $table->date('depart_date');
+	    $table->date('return_date');
+	    $table->string('duration');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('bookings');
     }
 };
