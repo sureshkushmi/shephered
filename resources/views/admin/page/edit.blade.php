@@ -1,5 +1,5 @@
 <!-- resources/views/admin/pages/edit.blade.php -->
-@extends('layouts.admin')
+@extends('admin.admin')
 
 @section('content')
     <h1>Edit Page</h1>

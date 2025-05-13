@@ -10,6 +10,18 @@
             </li>
             <li class="nav-item d-none d-md-block"><a href="{{ route('admin.dashboard') }}" class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">Home</a></li>
             <li class="nav-item d-none d-md-block"><a href="{{ route('admin.packages.index') }}" class="nav-link {{ request()->routeIs('admin.packages.index') ? 'active' : '' }}">Package</a></li>
+	    <li class="nav-item d-none d-md-block">
+<a href="{{ route('admin.pages.index') }}" class="nav-link {{ request()->routeIs('admin.pages.index') ? 'active' : '' }}">Pages</a>
+	    </li>
+<li class="nav-item d-none d-md-block">
+<a href="{{ route('admin.services.index') }}" class="nav-link {{ request()->routeIs('admin.services.index') ? 'active' : '' }}">Services
+</a>
+	    </li>
+<li class="nav-item d-none d-md-block">
+<a href="{{ route('admin.slider.index') }}" class="nav-link {{ request()->routeIs('admin.slider.index') ? 'active' : '' }}">Slider
+</a>
+	    </li>
+
         </ul>
         <!--end::Start Navbar Links-->
         <!--begin::End Navbar Links-->

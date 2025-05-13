@@ -3,7 +3,7 @@
 namespace App\Providers;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-
+use App\Models\Page;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -19,21 +19,23 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('navLinks', [
-            ['label' => 'Home', 'url' => url('/')],
-            ['label' => 'About', 'url' => url('/about')],
-            ['label' => 'Services', 'url' => url('/services')],
-            ['label' => 'Tour Packages', 'url' => url('/packages')],
-            [
-                'label' => 'Pages', 'dropdown' => [
-                    ['label' => 'Blog Grid', 'url' => url('/blog')],
-                    ['label' => 'Blog Detail', 'url' => url('/single')],
-                    ['label' => 'Destination', 'url' => url('/destination')],
-                    ['label' => 'Travel Guides', 'url' => url('/guide')],
-                    ['label' => 'Testimonial', 'url' => url('/testimonial')],
-                ]
-            ],
-            ['label' => 'Contact', 'url' => url('/contact')],
-        ]);
+        $pages = Page::where('status', 'active')->get();
+
+    // Build the navLinks array dynamically
+    $navLinks = [
+        ['label' => 'Home', 'url' => url('/')],
+        ['label' => 'Tour Packages', 'url' => url('/tour-packages')],
+    ];
+ foreach ($pages as $page) {
+        $navLinks[] = [
+            'label' => $page->title,
+            'url' => url($page->slug),
+        ];
+    }
+
+    
+
+    // Share with all views
+    View::share('navLinks', $navLinks);
     }
 }

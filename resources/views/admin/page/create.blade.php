@@ -1,5 +1,5 @@
 <!-- resources/views/admin/pages/create.blade.php -->
-@extends('layouts.admin')
+@extends('admin.admin')
 
 @section('content')
     <h1>Create Page</h1>

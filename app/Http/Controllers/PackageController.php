@@ -10,10 +10,12 @@ class PackageController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
-    }
+   public function index()
+{
+    $packages = Package::latest()->get();
+    return view('pages.packages', compact('packages'));
+}
+
 
     /**
      * Show the form for creating a new resource.

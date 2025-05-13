@@ -12,19 +12,14 @@ class PageController extends Controller
     // Show form for creating a new page
     public function create()
     {
-        return view('admin.pages.create');
+        return view('admin.page.create');
     }
 
     // Store a new page
     public function store(Request $request)
     {
-        $request->validate([
-            'slug' => 'required|unique:pages,slug',
-            'title' => 'required',
-            'content' => 'required',
-        ]);
+        Page::create($request->only(['slug', 'title', 'content']));
 
-        Page::create($request->all());
 
         return redirect()->route('admin.pages.index')->with('success', 'Page created successfully.');
     }
@@ -32,7 +27,7 @@ class PageController extends Controller
     // Edit a page
     public function edit(Page $page)
     {
-        return view('admin.pages.edit', compact('page'));
+        return view('admin.page.edit', compact('page'));
     }
 
     // Update a page
@@ -53,6 +48,6 @@ class PageController extends Controller
     public function index()
     {
         $pages = Page::all();
-        return view('admin.pages.index', compact('pages'));
+        return view('admin.page.index', compact('pages'));
     }
 }
